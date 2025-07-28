@@ -1,6 +1,4 @@
 import time
-
-from selenium.webdriver import Keys
 from selenium.webdriver.common.by import By
 from pages.base_page import BasePage
 from selenium.webdriver.support import expected_conditions as EC
@@ -9,11 +7,6 @@ from selenium.webdriver.support import expected_conditions as EC
 class GoogleTranslatePage(BasePage):
     URL = "https://translate.google.com/?hl=en&sl=os&tl=es&op=translate"
 
-    # Локаторы
-    SOURCE_LANG_BUTTON = (By.XPATH, "")
-    TARGET_LANG_BUTTON = (By.XPATH, "")
-    ENGLISH_LANG_OPTION = (By.XPATH, "")
-    RUSSIAN_LANG_OPTION = (By.XPATH, "")
     SOURCE_TEXT_AREA = (By.XPATH, "//input[@placeholder='Search languages']")
     ORIGINAL_TEXT_AREA = (By.XPATH,"//textarea[@aria-label='Source text']")
     TRANSLATED_TEXT_AREA = (By.XPATH, "(//span[@lang='ru'])[1]")
